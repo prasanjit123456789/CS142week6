@@ -95,7 +95,7 @@ public:
       	// void replace_At_Parent(Node * A, Node *B) - Replaces A with B at the parent of A. This replacement makes the B the respective child (left/right child depending if A was left or right child of its parent)
 	void replace_At_Parent(Node* A,Node* B){
 		//if B is the left child of A
-		if(A->left==B){ A->parent->left=B; B->parent=A->parent;}
+		if(A->parent->left==A){ A->parent->left=B; B->parent=A->parent;}
 		//if B is the right child of A
 		else {A->parent->right=B; B->parent=A->parent;}
 	}
